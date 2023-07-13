@@ -18,17 +18,31 @@ const destinationSchema = new Schema({
 const flightSchema = new Schema({
 airline: {
     type: String,
-    enum: ['American','Southwest','United']
+    enum: ['American','Southwest','United'],
 },
 airport: {
     type: String,
-    enum: ['AUS','DFW','DEN','LAX','SAN']
+    enum: ['AUS','DFW','DEN','LAX','SAN'],
+    default: 'DEN',
 },
 flightNo: {
     type: Number,
     min: 10,
-    max:9999
+    max:9999,
+    
 },
+departs:{
+    type: Date,
+    default: function() {
+    //   let oneYearFromNow = new Date();
+    //   oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
+    //  return oneYearFromNow;
+    return new Date(new Date().setFullYear(new Date().getFullYear() + 1))
+    // (new Date().setFullYear(new Date().getFullYear() + 1
+}
+  },
+
+
 destinations:[destinationSchema]
 
 },{

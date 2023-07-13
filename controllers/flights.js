@@ -14,7 +14,20 @@ module.exports = {
 
 async function create(req, res) {
     try {
-        await Flight.create(req.body);
+      
+      let flight =await new Flight()
+      flight.airline=req.body.airline
+      flight.flightNo=req.body.flightNo
+      console.log(new Flight())
+     if(req.body.departs){
+      flight.departs=req.body.departs
+      
+     }
+     if(req.body.airport){
+      flight.airport=req.body.airport
+      
+     }
+      flight.save()
        
         res.redirect('/flights');
       } catch (err) {
