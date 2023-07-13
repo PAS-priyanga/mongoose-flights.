@@ -2,22 +2,27 @@
 <section id="show-page">
     <div>airline: </div>
     <div><%= flight.airline %></div>
-    <div>flightNo Year: </div>
+    <div>flight Number: </div>
     <div><%= flight.flightNo %></div>
-    <div>destinations: </div>
-    <div><%= flight.destinations %></div>
-    <div>airline: </div>
-    <div><%= flight.airline %></div>
+    
     <div>arrival: </div>
     <div><%= flight.arrival  %></div>
   </section>
   
 
-  br><br><h2>destinations</h2>
+  <br><h2>destinations</h2>
   <form id="add-destination-form" method="POST"
     action="/flights/<%= flight._id %>/destinations">
     <label>airport:</label>
-    <textarea name="content"></textarea>
+    <select name="airport">    
+      <option value="AUS">AUS</option>
+     <option value="DFW">DFW</option>
+      <option value="DEN">DEN</option>
+      <option value="LAX">LAX</option>
+      <option value="SAN">SAN</option>
+
+  </select>
+    
     <label>arrival</label>
     <input type="datetime-local" name="arrival" value="2023-06-12T19:30">
       

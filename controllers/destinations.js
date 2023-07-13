@@ -8,6 +8,7 @@ module.exports = {
 async function create(req, res) {
   const flight = await Flight.findById(req.params.id);
   // We can push (or unshift) subdocs into Mongoose arrays
+  console.log(flight);
   flight.destinations.push(req.body);
   try {
     // Save any changes made to the movie doc
