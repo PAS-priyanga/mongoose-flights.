@@ -48,6 +48,7 @@ res.render("flights/index",{flights:foundFlights})
 }
 
 async function show(req, res) {
-  const flight = await Flight.findById(req.params.id);
-  res.render('flights/show', { title: 'flight Detail', flight });
-}
+  const flight = await Flight.findById(req.params.id,function(err, flight) {
+    const tickets=Ticket.find({flight: flight._id},function(err, tickets) {
+      res.render('flights/show', { title: 'flight Detail', flight, tickets });
+    });})}
