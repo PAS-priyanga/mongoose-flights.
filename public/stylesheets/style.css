@@ -6,3 +6,44 @@ body {
 a {
   color: #00B7FF;
 }
+table {
+  display: inline;
+}
+
+
+
+
+.tb {
+  border-radius: 10px;
+  border-spacing: 1px;
+}
+.button {
+  background: rgb(102, 115, 228);
+  color: #fff;
+  width: 70px;
+}
+thead {
+  border-top: none;
+}
+
+#nav {
+  font-family: "Saira Semi Condensed", sans-serif;
+  height: 5em;
+  display: inline;
+  overflow: hidden;
+}
+label,
+select,
+#form1 {
+  margin: 10px 0 10px 0;
+}
+
+section {
+  margin: 12px;
+}
+
+
+
+
+
+
