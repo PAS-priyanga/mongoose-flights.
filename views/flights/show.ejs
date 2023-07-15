@@ -21,7 +21,7 @@
       <option value="LAX">LAX</option>
       <option value="SAN">SAN</option>
 
-  </select>
+  <select>
     
     <label>arrival</label>
     <input type="datetime-local" name="arrival" value="2023-06-12T19:30">
@@ -54,6 +54,47 @@
 <% } else { %>
 <h5>No Destination Yet</h5>
 <% } %>
+
+
+
+
+
+<br><h4><strong>Tickets</strong></h4>
+<table>
+  <thead>
+    <tr>
+      
+    <td> seat </td>
+    <td> price </td>
+    <td> flight </td>
+      
+    </tr>
+  </thead>
+  <tbody>
+
+
+   
+    <% tickets.forEach(function(t) { %>
+      <tr>
+        <!-- .toLocaleDateString() provides a more friendly date format -->
+        
+        <td><%= t.seat %></td>
+        <td><%= t.price %></td>
+        <td><%= t.flight %></td>
+      </tr>
+    <% }); %>
+    </tbody>
+</table>
+
+
+<% if (tickets.length===0) { %>
+  <p> no tickets available for the flight</p>
+ 
+<% } %>
+ 
+  </select>
+  <button type="submit">Add to Cast</button>
+</form>
 
 
 

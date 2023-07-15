@@ -10,11 +10,11 @@ const ticketSchema = new Schema({
         match: /[A-F][1-9]\d?/,
     },
     price: {
-        type: ObjectId,
+        type: Number,
         min: 0
     },
 flight:{
-    type:objectId,
+    type: Schema.Types.ObjectId,
     ref: "Flight",
 }
     })
