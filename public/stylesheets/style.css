@@ -1,6 +1,13 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+
+body > nav {
+  grid-area: nav;
+  background-color: #B8C0C2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
+  height:1cm;
 }
 
 a {
@@ -34,7 +41,7 @@ thead {
 }
 label,
 select,
-#form1 {
+#form1  {
   margin: 10px 0 10px 0;
 }
 
@@ -42,8 +49,31 @@ section {
   margin: 12px;
 }
 
+table {
+  font-size: 20px;
+}
 
+table thead th {
+  padding: 5px;
+  border-bottom: 2px solid #424748;
+}
 
+table td {
+  padding: 10px;
+  text-align: center;
+}
+
+#show-page ul {
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: none;
+  display: inline
+}
+  
+#show-page li {
+  font-weight: bold;
+  display: inline
+}
 
 
 

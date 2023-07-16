@@ -5,11 +5,10 @@
     <div>flight Number: </div>
     <div><%= flight.flightNo %></div>
     
-    <div>arrival: </div>
-    <div><%= flight.arrival  %></div>
-  </section>
+  <div>departs: </div>
+  <div><%= flight.departs  %></div>
+</section>
   
-
   <br><h2>destinations</h2>
   <form id="add-destination-form" method="POST"
     action="/flights/<%= flight._id %>/destinations">
